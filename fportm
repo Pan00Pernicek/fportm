@@ -3,7 +3,8 @@ if [ $1 = search ]; then
  dirname $(find /usr/ports | grep xterm) | sort -u | cut -d'/' -f4-
 fi
 if [ $1 = install ]; then
-cd "/usr/ports/$2
-echo $(tput setab 6) installing $(basename $(pwd)) with full patch of $(pwd)....$(tput sgr0)
-make install clean
-echo done!
+ cd "/usr/ports/"$2
+ echo $(tput setab 6) installing $(basename $(pwd)) with full patch of $(pwd)....$(tput sgr0)
+ make install clean
+ echo done!
+fi
