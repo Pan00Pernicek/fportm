@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 if [ $1 = search ]; then
  dirname $(find /usr/ports | grep xterm) | sort -u | cut -d'/' -f4-
 fi
